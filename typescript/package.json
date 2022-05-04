@@ -1,0 +1,14 @@
+{
+  "name": "codingeval-ts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Coding evaluation for interviews - Typescript edition",
+  "main": "MyOrganization.ts",
+  "scripts": {
+    "start": "ts-node ./MyOrganization.ts"
+  },
+  "author": "American Airlines",
+  "devDependencies": {
+    "ts-node": "^10.2.1"
+  }
+}
