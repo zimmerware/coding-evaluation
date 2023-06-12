@@ -40,7 +40,7 @@ namespace MyOrganization
             StringBuilder sb = new StringBuilder(prefix + "+-" + pos.ToString() + "\n");
             foreach (Position p in pos.GetDirectReports())
             {
-                sb.Append(PrintOrganization(p, prefix + "\t"));
+                sb.Append(PrintOrganization(p, prefix + "  "));
             }
             return sb.ToString();
         }
