@@ -28,16 +28,16 @@ vps.addDirectReport(s);
 
 const myOrg = new Organization(ceo);
 
-myOrg.hire(new Name('Doug', 'Parker'), 'CEO');
-myOrg.hire(new Name('Robert', 'Isom'), 'President');
+myOrg.hire(new Name('Bob', 'Smith'), 'CEO');
+myOrg.hire(new Name('Zaphod', 'Beeblebrox'), 'President');
 myOrg.hire(new Name('Gandalf', 'Gray'), 'Director Enterprise Architecture');
-myOrg.hire(new Name('Head', 'Geek'), 'Director Customer Technology');
-myOrg.hire(new Name('Jane', 'Smith'), 'VP Marketing');
-myOrg.hire(new Name('Jim', 'Jones'), 'VP Sales');
+myOrg.hire(new Name('Bill', 'Lumbergh'), 'Director Customer Technology');
+myOrg.hire(new Name('Ford', 'Prefect'), 'VP Marketing');
+myOrg.hire(new Name('Jane', 'Seller'), 'VP Sales');
 myOrg.hire(new Name('Bean', 'Counter'), 'VP Finance');
-myOrg.hire(new Name('Maya', 'Liebman'), 'CIO');
-myOrg.hire(new Name('Danielle', 'Hoover'), 'VP Technology');
-myOrg.hire(new Name('Scape', 'Goat'), 'VP Infrastructure');
+myOrg.hire(new Name('Victoria', 'Sinclair'), 'CIO');
+myOrg.hire(new Name('Head', 'Geek'), 'VP Technology');
+myOrg.hire(new Name('Steve', 'Dent'), 'VP Infrastructure');
 myOrg.hire(new Name('Slick', 'Willie'), 'Salesperson');
 
 console.log(myOrg.toString());

@@ -40,16 +40,16 @@ namespace MyOrganization
         static void Main()
         {
             MyOrganization org = new MyOrganization();
-            org.Hire(new Name("Doug", "Parker"), "CEO");
-            org.Hire(new Name("Robert", "Isom"), "President");
+            org.Hire(new Name("Bob", "Smith"), "CEO");
+            org.Hire(new Name("Zaphod", "Beeblebrox"), "President");
             org.Hire(new Name("Gandalf", "Gray"), "Director Enterprise Architecture");
-            org.Hire(new Name("Head", "Geek"), "Director Customer Technology");
-            org.Hire(new Name("Jane", "Smith"), "VP Marketing");
-            org.Hire(new Name("Jim", "Jones"), "VP Sales");
+            org.Hire(new Name("Bill", "Lumbergh"), "Director Customer Technology");
+            org.Hire(new Name("Ford", "Prefect"), "VP Marketing");
+            org.Hire(new Name("Jane", "Seller"), "VP Sales");
             org.Hire(new Name("Bean", "Counter"), "VP Finance");
-            org.Hire(new Name("Maya", "Liebman"), "CIO");
-            org.Hire(new Name("Danielle", "Hoover"), "VP Technology");
-            org.Hire(new Name("Scape", "Goat"), "VP Infrastructure");
+            org.Hire(new Name("Victoria", "Sinclair"), "CIO");
+            org.Hire(new Name("Head", "Geek"), "VP Technology");
+            org.Hire(new Name("Steve", "Dent"), "VP Infrastructure");
             org.Hire(new Name("Slick", "Willie"), "Salesperson");
             Console.WriteLine(org);
         }
