@@ -9,10 +9,10 @@ namespace MyOrganization
 {
     internal class Employee
     {
-        private int identifier;
+        private Guid identifier;
         private Name name;
 
-        public Employee(int identifier, Name name)
+        public Employee(Guid identifier, Name name)
         {
             if (name == null)
                 throw new Exception("name cannot be null");
@@ -20,7 +20,7 @@ namespace MyOrganization
             this.name = name;
         }
 
-        public int GetIdentifier()
+        public Guid GetIdentifier()
         {
             return identifier;
         }
