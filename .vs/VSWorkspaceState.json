@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\dotnet",
+    "\\dotnet\\MyOrganization"
   ],
-  "SelectedNode": "\\MyOrganization.sln",
+  "SelectedNode": "\\dotnet\\MyOrganization\\Organization.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace MyOrganization
 {
     /// <summary>
-    /// Use these for unit tests....they WORK
+    /// Use these for unit tests....they WORK as expeected
     ///     org.Hire(new Name("Slick", "William"), "Salesperson"); //duplicate test to make sure William doesn't replacee Willie
     ///     org.Hire(new Name("Slick", "William"), "Salespersonnnnnnnnnnnn");  //no such job test
     /// </summary>
@@ -59,46 +59,47 @@ namespace MyOrganization
             if (root == null)
                 return null;
 
+            //CEO only
             if (title == root.GetTitle() && !root.IsFilled())
             {
                 root.SetEmployee(employee);
                 Position position = new Position(title, employee);
                 return position;
             }
-            ImmutableList<Position> positions = root.GetDirectReports();
-            foreach (Position pos1 in positions)
+
+            Position? p = SearcherRecursive(root, employee, title);
+
+            if (p != null)
+                return p;
+            else 
+                return null; //not found
+        }
+
+        protected Position? SearcherRecursive(Position listOfPositions, Employee employee, string title)
+        {
+            if (listOfPositions == null)
+                return null;
+
+            ImmutableList<Position> positions = listOfPositions.GetDirectReports();
+           
+            foreach (Position pos in positions)
             {
-                if (title == pos1.GetTitle() && !pos1.IsFilled())
+
+                if (title == pos.GetTitle() && !pos.IsFilled())
                 {
                     Position position = new Position(title, employee);
-                    pos1.SetEmployee(employee);
+                    pos.SetEmployee(employee);
                     return position;
                 }
-                ImmutableList<Position> pos2 = pos1.GetDirectReports();
-                foreach (Position pos3 in pos2)
+                else
                 {
-                    if (title == pos3.GetTitle() && !pos3.IsFilled())
-                    {
-                        Position position = new Position(title, employee);
-                        pos3.SetEmployee(employee);
-                        return position;
-                    }
-                    ImmutableList<Position> pos4 = pos3.GetDirectReports();
-                    foreach (Position pos5 in pos4)
-                    {
-                        if (title == pos5.GetTitle() && !pos5.IsFilled())
-                        {
-                            Position position = new Position(title, employee);
-                            pos5.SetEmployee(employee);
-                            return position;
-                        }
-                    }
+                    SearcherRecursive(pos, employee, title);
                 }
-
             }
 
-            return null; //not found
+            return null;
         }
+
 
         override public string ToString()
         {
